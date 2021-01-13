@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <header><a href="./index.html" id="logo"></a>WTWL</header>
-    <nav id="menu">
+  </head>
+  <body>
+    <header>
+      <a href="./index.html" id="logo">WTFL</a><span id="city">CUENCA</span>
+      <nav id="menu">
         <ul>
-            <a href="./now.html">HOY</a>
-            <a href="./photolog.html">FOTOLOG</a>
-            <a href="./news.html">NOTICIAS</a>
+          <a href="./now.html">HOY</a>
+          <a href="./photolog.html">FOTOLOG</a>
+          <a href="./news.html">NOTICIAS</a>
         </ul>
-    </nav>
-    <main> 
-        <section id="searchLocation">
-            <input type="text" name="city" id="">
-            <button id="searchLocationBtn">BUSCAR</button>
-        </section>
+      </nav>
+    </header>
+    <main>
+      <section id="searchLocation">
+        <input type="text" name="location" id="locationInput" placeholder="Tu ciudad">
+        <button id="searchLocationBtn">&#128269;</button>
+      </section>
+      <section id="prediction">
+          <div id="date">13/01/2021</span>
+          <div id="time">10:50</span>
+          <div id="nowPrediction">
+              
+          </div>
+      </section>
     </main>
-    
-</body>
+  </body>
 </html>
