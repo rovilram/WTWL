@@ -1,33 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <a href="./index.html" id="logo">WTFL</a><span id="city">CUENCA</span>
-      <nav id="menu">
-        <ul>
-          <a href="./now.html">HOY</a>
-          <a href="./photolog.html">FOTOLOG</a>
-          <a href="./news.html">NOTICIAS</a>
-        </ul>
-      </nav>
+        <a href="./index.html" id="logo">WTFL</a><span id="city">CUENCA</span>
+        <nav id="menu">
+            <ul>
+                <a href="./now.html">HOY</a>
+                <a href="./photolog.html">FOTOLOG</a>
+                <a href="./news.html">NOTICIAS</a>
+            </ul>
+        </nav>
     </header>
     <main>
-      <section id="searchLocation">
-        <input type="text" name="location" id="locationInput" placeholder="Tu ciudad">
-        <button id="searchLocationBtn">&#128269;</button>
-      </section>
-      <section id="prediction">
-          <div id="date">13/01/2021</span>
-          <div id="time">10:50</span>
-          <div id="nowPrediction">
-              
-          </div>
-      </section>
+        <section id="searchLocation">
+            <input type="text" name="location" id="locationInput" placeholder="Tu ciudad">
+            <button id="searchLocationBtn">&#128269;</button>
+        </section>
+        <section id="prediction">
+            <div id="date">13/01/2021</span>
+                <div id="time">10:50</span>
+                    <article class="resumePrediction">
+                        <img src="img/weather-icons/sunny.png" alt="sunny">
+                        <div id="actualTemp">+8ºC</div>
+                        <div id="maxTemp">+10ºC</div>
+                        <div id="minTemp">+2ºC</div>
+                    </article>
+                    <article class="extendedPrediction">
+                        <div id="minmaxTemp">+12/+2 ºC/div>
+                        <div id="windSpeed">2 km/h</div>
+                        <div id="humidity">10% </div>
+                        <div id="atmPreassure">1010 mbar</div>
+                    </article>
+        </section>
+        <section id="photos">
+            <h2 class="sectionHeader"><a href="./photolog.html">FOTOS</a></h2>
+            <figure class="photo">
+                <img class="photoImg" src="https://picsum.photos/300/300?random=1" alt="Weather photo">
+                <figcaption class="photoCaption">Valencia</figcaption>
+            </figure>
+            <figure class="photo">
+                <img class="photoImg" src="https://picsum.photos/300/300?random=2" alt="Weather photo">
+                <figcaption class="photoCaption">Toledo</figcaption>
+            </figure>
+            <figure class="photo">
+                <img class="photoImg" src="https://picsum.photos/300/300?random=3" alt="Weather photo">
+                <figcaption class="photoCaption">Benidorm</figcaption>
+            </figure>
+        </section>
+        <section id="news">
+            <h2 class="sectionHeader"><a href="./news.html">NOTICIAS</a></h2>
+            <article class="newsArticle">
+                <a class="newsLink" href="#">
+                    <img src="https://picsum.photos/300/300?random=4" alt="" class="newsImg">
+                    <p class="articleHeadline">Temporal Filomena</p>
+                </a>
+            </article>
+            <article class="newsArticle">
+                <a class="newsLink" href="#">
+                    <img src="https://picsum.photos/300/300?random=5" alt="" class="newsImg">
+                    <p class="articleHeadline">Cambio climático</p>
+                </a>
+            </article>
+            <article class="newsArticle">
+                <a class="newsLink" href="#">
+                    <img src="https://picsum.photos/300/300?random=6" alt="" class="newsImg">
+                    <p class="articleHeadline">Invierno</p>
+                </a>
+            </article>
+
+        </section>
     </main>
-  </body>
+</body>
 </html>
