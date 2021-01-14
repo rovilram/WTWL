@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
- 
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="/css/normalize.css">
   <!-- Cargamos ahora nuestro css -->
   <link rel="stylesheet" href="/css/style.css">
+  <!-- Cargamos los iconos de fontawesome -->
+  <script src="https://kit.fontawesome.com/55bf8bd181.js" crossorigin="anonymous"></script>
   <title>WTWL - Weather</title>
 </head>
 
@@ -26,24 +28,57 @@
       </ul>
     </nav>
   </header>
+
+  <!-- Pau TODO: Añadir los detalles del tiempo y la parte de imágenes -->
   <main class="main">
-    <section id="searchLocation" class="search-location">
-      <input type="text" name="location" id="locationInput" placeholder="Tu ciudad" class="seleccion-ciudad">
-      <button id="searchLocationBtn" class="search-location-button">&#128269;</button>
-    </section>
-    <section id="prediction" class="prediction-box">
-      <div id="date" class="fecha-actual">13/01/2021</span>
-        <div id="time" class="hora-actual">10:50</span>
-          <div id="nowPrediction" class="prediccion-actual">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quae quas laboriosam quasi dolor error!
-            Incidunt, magni vero eum, rem quisquam necessitatibus repellat aspernatur animi harum, cupiditate quae
-            blanditiis eaque!
+    <section class="main-section">
+      <div class="container">
+        <!-- En la cabecera vamos a mostrar el día/hora actual y la caja para buscar ciudad -->
+        <header class="main-section-header">
+          <div class="actual-date-hour">
+            <div class="fecha">
+              <p id="diaSemana" class="diaSemana"></p>
+              <p id="dia" class="dia"></p>
+              <p>de </p>
+              <p id="mes" class="mes"></p>
+              <p>del </p>
+              <p id="year" class="year"></p>
+            </div>
+            <div class="reloj">
+              <p id="horas" class="horas"></p>
+              <p>:</p>
+              <p id="minutos" class="minutos"></p>
+              <p>:</p>
+              <p id="segundos" class="segundos"></p>
+            </div>
           </div>
+          <!-- Selección de ciudad -->
+          <input type="text" name="select-city" id="city">
+          <button class="search-button"><i class="fas fa-search-location fa-1x"></i></button>
+        </header>
+        <!-- Cuadro de temperatura -->
+        <section class="real-prediction">
+          <div class="prediction-content">
+            <img src="/img/weather-icons/weather_icon-05.png" alt="Imágen del clima">
+            <p class="temperature">10º</p>
+          </div>
+        </section>
+        <section class="prediction-details">
+
+        </section>
+      </div>
     </section>
+
+    <aside class="notice-section">
+
+    </aside>
+
   </main>
   <footer class="footer">
     Proyecto de prueba
   </footer>
+
+  <script src="/javascript/obtenerFechaHora.js"></script>
 </body>
 
 </html>
