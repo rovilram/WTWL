@@ -3,20 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    
+    <title>WTWL - Weather</title>
   </head>
   <body>
-    <header>
-      <a href="./index.html" id="logo">WTFL</a><span id="city">CUENCA</span>
-      <nav id="menu">
+    <header class="header">
+      <h1 class="logo-box">
+        <a href="./index.html" id="logo" class="logo-text">WTFL</a>
+      </h1>
+      <span id="city" class="ciudad-elegida">CUENCA</span>
+      <nav id="menu" class="main-navigation">
         <ul>
-          <a href="./now.html">HOY</a>
-          <a href="./photolog.html">FOTOLOG</a>
-          <a href="./news.html">NOTICIAS</a>
+          <a href="./now.html" class="navigation-link">HOY</a>
+          <a href="./photolog.html" class="navigation-link">FOTOLOG</a>
+          <a href="./news.html" class="navigation-link">NOTICIAS</a>
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="main">
       <section id="searchLocation">
         <input type="text" name="location" id="locationInput" placeholder="Tu ciudad">
         <button id="searchLocationBtn">&#128269;</button>
@@ -29,5 +33,8 @@
           </div>
       </section>
     </main>
+    <footer class="footer">
+      Proyecto de prueba
+    </footer>
   </body>
 </html>
