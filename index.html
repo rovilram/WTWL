@@ -1,79 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Cargamos normalize.css para que los estilos sean iguales para todos los navegadores -->
+  <link rel="stylesheet" href="/css/normalize.css">
+  <!-- Cargamos ahora nuestro css -->
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Cargamos los iconos de fontawesome -->
+  <script src="https://kit.fontawesome.com/55bf8bd181.js" crossorigin="anonymous"></script>
+  <title>WTWL - Weather</title>
 </head>
+
 <body>
-    <header>
-        <a href="./index.html" id="logo">WTFL</a><span id="city">CUENCA</span>
-        <nav id="menu">
-            <ul>
-                <a href="./now.html">HOY</a>
-                <a href="./photolog.html">FOTOLOG</a>
-                <a href="./news.html">NOTICIAS</a>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="searchLocation">
-            <input type="text" name="location" id="locationInput" placeholder="Tu ciudad">
-            <button id="searchLocationBtn">&#128269;</button>
+  <header class="header">
+    <h1 class="logo-box">
+      <a href="./index.html" id="logo" class="logo-text">WTFL</a>
+    </h1>
+    <span id="city" class="ciudad-elegida">CUENCA</span>
+    <nav id="menu" class="main-navigation">
+      <ul>
+        <a href="./now.html" class="navigation-link">HOY</a>
+        <a href="./photolog.html" class="navigation-link">FOTOLOG</a>
+        <a href="./news.html" class="navigation-link">NOTICIAS</a>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Pau TODO: Añadir los detalles del tiempo y la parte de imágenes -->
+  <main class="main">
+    <section class="main-section">
+      <div class="container">
+        <!-- En la cabecera vamos a mostrar el día/hora actual y la caja para buscar ciudad -->
+        <header class="main-section-header">
+          <div class="actual-date-hour">
+            <div class="fecha">
+              <p id="diaSemana" class="diaSemana"></p>
+              <p id="dia" class="dia"></p>
+              <p>de </p>
+              <p id="mes" class="mes"></p>
+              <p>del </p>
+              <p id="year" class="year"></p>
+            </div>
+            <div class="reloj">
+              <p id="horas" class="horas"></p>
+              <p>:</p>
+              <p id="minutos" class="minutos"></p>
+              <p>:</p>
+              <p id="segundos" class="segundos"></p>
+            </div>
+          </div>
+          <!-- Selección de ciudad -->
+          <input type="text" name="select-city" id="city">
+          <button class="search-button"><i class="fas fa-search-location fa-1x"></i></button>
+        </header>
+        <!-- Cuadro de temperatura -->
+        <section class="real-prediction">
+          <div class="prediction-content">
+            <img src="/img/weather-icons/weather_icon-05.png" alt="Imágen del clima">
+            <p class="temperature">10º</p>
+          </div>
         </section>
-        <section id="prediction">
-            <div id="date">13/01/2021</span>
-                <div id="time">10:50</span>
-                    <article class="resumePrediction">
-                        <img src="img/weather-icons/sunny.png" alt="sunny">
-                        <div id="actualTemp">+8ºC</div>
-                        <div id="maxTemp">+10ºC</div>
-                        <div id="minTemp">+2ºC</div>
-                    </article>
-                    <article class="extendedPrediction">
-                        <div id="minmaxTemp">+12/+2 ºC/div>
-                        <div id="windSpeed">2 km/h</div>
-                        <div id="humidity">10% </div>
-                        <div id="atmPreassure">1010 mbar</div>
-                    </article>
-        </section>
-        <section id="photos">
-            <h2 class="sectionHeader"><a href="./photolog.html">FOTOS</a></h2>
-            <figure class="photo">
-                <img class="photoImg" src="https://picsum.photos/300/300?random=1" alt="Weather photo">
-                <figcaption class="photoCaption">Valencia</figcaption>
-            </figure>
-            <figure class="photo">
-                <img class="photoImg" src="https://picsum.photos/300/300?random=2" alt="Weather photo">
-                <figcaption class="photoCaption">Toledo</figcaption>
-            </figure>
-            <figure class="photo">
-                <img class="photoImg" src="https://picsum.photos/300/300?random=3" alt="Weather photo">
-                <figcaption class="photoCaption">Benidorm</figcaption>
-            </figure>
-        </section>
-        <section id="news">
-            <h2 class="sectionHeader"><a href="./news.html">NOTICIAS</a></h2>
-            <article class="newsArticle">
-                <a class="newsLink" href="#">
-                    <img src="https://picsum.photos/300/300?random=4" alt="" class="newsImg">
-                    <p class="articleHeadline">Temporal Filomena</p>
-                </a>
-            </article>
-            <article class="newsArticle">
-                <a class="newsLink" href="#">
-                    <img src="https://picsum.photos/300/300?random=5" alt="" class="newsImg">
-                    <p class="articleHeadline">Cambio climático</p>
-                </a>
-            </article>
-            <article class="newsArticle">
-                <a class="newsLink" href="#">
-                    <img src="https://picsum.photos/300/300?random=6" alt="" class="newsImg">
-                    <p class="articleHeadline">Invierno</p>
-                </a>
-            </article>
+        <section class="prediction-details">
 
         </section>
-    </main>
+      </div>
+    </section>
+
+    <aside class="notice-section">
+
+    </aside>
+
+  </main>
+  <footer class="footer">
+    Proyecto de prueba
+  </footer>
+
+  <script src="/javascript/obtenerFechaHora.js"></script>
 </body>
+
 </html>
